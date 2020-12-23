@@ -1,0 +1,128 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo Producto</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of productos;let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{producto.nombre}}</td>
+      <td>{{producto.tipoProducto}}</td>
+      <td>{{producto.cantidad}}</td>
+      <td>{{producto.precio}}</td>
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+          <button type="button" class="btn btn-danger" (click)='deleteProduct(producto.id)'>
+            <img src="assets/img/remove.svg" width="20px" height="30px">
+          </button>
+          <button type="button" class="btn btn-primary" (click)='abrirModalActualizar(producto)'>
+            <img src="assets/img/updated.svg" width="20px" height="30px">
+          </button>
+          <button type="button" class="btn btn-success" (click)='abrirModalReserva(producto)'>
+            <img src="assets/img/reservado.svg" width="20px" height="30px">
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="modalActualizar" class="abrir-modal animacion fadeIn">
+  <div style="display:block;" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Actualizar</h5>
+          <button type="button" (click)='cerrarModalActualizar()' class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <form [formGroup]="productoForm" (ngSubmit)="actualizarProducto()">
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Ingrese nombre del producto" formControlName="nombre" required>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Tipo Producto</label>
+                    <select validar id="reserva" class="form-control" formControlName="tipoProducto">
+                      <option value="">(Seleccionar)</option>
+                      <option *ngFor="let tipo of tipos" [value]="tipo.nombre">{{tipo.nombre}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Ingrese la cantidad de existencias" formControlName="cantidad" required>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Ingrese el precio del producto" formControlName="precio" required name="price"
+                      min="0" value="0" step=".01" required>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-success" style="width: 150px;">
+                    Actualizar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="modalReserva" class="abrir-modal animacion fadeIn">
+  <div style="display:block;" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Actualizar</h5>
+          <button type="button" (click)='cerrarModalReserva()' class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <form [formGroup]="reservaForm" (ngSubmit)="reservarProducto()">
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Fecha de Reserva</label>
+                    <input type="date" class="form-control" id="exampleFormControlInput1"
+                      placeholder="Ingrese fecha en la cual desea reservar el producto" formControlName="fechaReserva" required>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-success" style="width: 150px;">
+                    Reservar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

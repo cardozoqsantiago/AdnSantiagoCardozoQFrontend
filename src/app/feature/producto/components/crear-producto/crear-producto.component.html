@@ -1,0 +1,43 @@
+<div class="container mb-3 mt-3">
+  <form [formGroup]="productoForm" (ngSubmit)="crear()">
+    <div class="row">
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1"
+            placeholder="Ingrese nombre del producto" formControlName="nombre" required>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Tipo Producto</label>
+            <select validar id="reserva" class="form-control" formControlName="tipoProducto">
+              <option value="">(Seleccionar)</option>
+              <option *ngFor="let tipo of tipos" [value]="tipo.nombre">{{tipo.nombre}}</option>
+            </select>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Cantidad</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1"
+            placeholder="Ingrese la cantidad de existencias" formControlName="cantidad" required>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Precio</label>
+          <input type="number" class="form-control" id="exampleFormControlInput1"
+            placeholder="Ingrese el precio del producto" formControlName="precio" required name="price" min="0"
+            value="0" step=".01" required>
+        </div>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-success" style="width: 150px;">
+          Crear
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
