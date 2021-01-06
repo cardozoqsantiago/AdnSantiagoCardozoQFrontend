@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
-  { path: 'navbar', loadChildren: () => import('./feature/navbar/navbar.module').then(mod => mod.NavbarModule) },
   { path: 'seccion', loadChildren: () => import('./feature/seccion/seccion.module').then(mod => mod.SeccionModule) },
   { path: 'reserva', loadChildren: () => import('./feature/reserva/reserva.module').then(mod => mod.ReservaModule) }
   

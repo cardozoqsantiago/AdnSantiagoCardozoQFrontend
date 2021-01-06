@@ -9,7 +9,6 @@ import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NavbarModule } from '../app/feature/navbar/navbar.module';
 import { SeccionModule } from '../app/feature/seccion/seccion.module';
 import { ReservaModule } from '../app/feature/reserva/reserva.module';
 
@@ -29,7 +28,6 @@ import { ReservaModule } from '../app/feature/reserva/reserva.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NavbarModule,
     SeccionModule,
     ReservaModule
   ],

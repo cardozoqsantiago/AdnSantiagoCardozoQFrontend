@@ -1,0 +1,405 @@
+/* General */
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin: 0px;
+	text-align: center;
+	background: #F1F1F1;
+	padding-top: 10px;
+}
+p{	
+	font: normal 13px/30px Arial, Helvetica, sans-serif;
+	color: #000000;
+	text-decoration: none;
+}
+a{
+	font: bold 13px Arial, Helvetica, sans-serif;
+	color: #07890B;
+	text-decoration: underline;
+}
+a:hover{
+	text-decoration: none;
+}
+/* Formulario Parrafo */
+.cuadrotexto80texto, cuadrotexto130parrafo, cuadrotexto150parrafo, cuadrotexto190texto, cuadrotexto200parrafo, cuadrotexto250texto{
+	border: solid 1px #809DB9;
+	background-color: #ffffff;
+	color:  Black;
+	padding: 2px;
+	height: 20px;
+	margin: 0px 5px;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;	
+	vertical-align: middle;
+}
+.cuadrotexto80texto{
+	width: 80px;
+}
+.cuadrotexto130parrafo{
+	width: 130px;
+}
+.cuadrotexto150parrafo{
+	width: 150px;
+}
+.cuadrotexto190texto{
+	width: 180px;
+}
+.cuadrotexto250texto{
+	width: 250px;
+}
+.cuadrotexto245texto{
+	width: 245px;
+}
+.cuadrotexto230texto{
+	width: 230px;
+}
+.cuadrotexto200parrafo{
+	width: 200px;
+	height: 50px;
+}
+.botoncalendario, .botonadicionardoc, .botonguardardoc, .botonimpromirdoc, .botonadicionarelem {
+	cursor:hand; 
+	cursor:pointer;
+	border-width: 0px;
+	border-style: none;
+}
+.botoncalendario  {
+	background: #E6E6E6 url(Imagenes/calendario.gif) no-repeat center center;
+	height: 16px;
+	width: 14px;
+}
+.botonadicionardoc  {
+	background: #FFFFFF url(Imagenes/adicionardocumento.jpg) no-repeat center center;
+	height: 27px;
+	width: 162px;
+}
+.botonguardardoc  {
+	background: #FFFFFF url(Imagenes/guardar.jpg) no-repeat center center;
+	height: 27px;
+	width: 162px;
+}
+.botonimpromirdoc  {
+	background: #FFFFFF url(Imagenes/imprimir.jpg) no-repeat center center;
+	height: 27px;
+	width: 162px;
+}
+.botonadicionarelem  {
+	background: #FFFFFF url(Imagenes/galeria/adicionarelemento.jpg) no-repeat center center;
+	height: 27px;
+	width: 162px;
+}
+/* Layout */
+#marco{
+	margin: auto;
+	padding: 0px;
+	width: 928px;
+	background: url(Imagenes/2.gif)  repeat-y left top;
+}
+#contenedor{
+	width: 890px;
+	margin: 0px 19px;
+	padding: 0px;
+	text-align: left;
+	background: #FFFFFF;
+}  
+#barradivision{	
+	width: 100%;
+	padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+#contenedorheader{
+	width: 890px;
+	margin: 0px;
+	padding: 0px;
+	background: url(Imagenes/header.jpg) no-repeat left top;
+	height: 173px;
+}
+#contenedorcontenido {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+}
+#margencontenido{
+	margin: 0px 11px 0px 9px;
+	border: 1px solid #E8E8E8;
+}
+#contenedorfooter {
+	width: 100%;
+	height: 23px;
+	background: #F1F1F1 url(Imagenes/GATTACA.gif) no-repeat right top;
+	color: #666666;
+	text-align: left;
+	font: normal 11px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+#contenedortitulo {
+	width: 100%;
+	height: 1px;
+	background: url(Imagenes/2.jpg)  repeat-x left top;
+	border-bottom: 1px solid #F0F0F0;
+}
+#contenedortitulo h1{
+	font: bold 22px Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-decoration: none;
+	margin: 0px 0px 0px 14px;
+	padding: 5px 0px 0px;
+}
+#contenedortitulo a{
+	font: bold 11px Arial, Helvetica, sans-serif;
+	color: #277B25;
+	text-decoration: underline;
+	margin-right: 10px;
+}
+#contenedortitulo a:hover{
+	text-decoration: none;
+}
+#contenedorsubtitulo {
+	width: 100%;
+	height: 19px;	
+}
+#contenedorsubtitulo h2{
+	font: bold 19px Arial, Helvetica, sans-serif;
+	color: #277B25;
+	text-decoration: none;
+	margin: 0px 0px 0px 14px;
+	padding: 5px 0px 0px;
+}
+#footer p {
+	color: #666666;
+	font: normal 11px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	margin: 0px 0px 0px 10px;
+	padding: 6px 0px 0px;
+}
+#footer strong{
+	color: #378C35;
+	font:  bold 11px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+/* Formulario */
+#formulario {
+	margin: 0px;
+	padding: 5px;
+	width: 100%;	
+}
+#formulario th {
+	font: bold 11px Arial, Helvetica, sans-serif;
+	color: #277B25;
+	text-decoration: none;
+	text-align: right;
+	width: 150px;	
+}
+.cuadrotexto80 {
+	border: solid 1px #809DB9;
+	background-color: #ffffff;
+	color: #333;
+	padding: 2px;
+	margin: 0px 5px;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;	
+	vertical-align: middle;
+}
+.cuadrotexto150 {
+	width: 150px;
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #666666;
+	text-decoration: none;
+	background: url(Imagenes/fondocuadrotexto.jpg)  repeat-x left top;
+	height: 19px;
+	border: 1px solid #C5C4BA;
+}
+.cuadrotexto250 {
+	width: 250px;
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #666666;
+	text-decoration: none;
+	background: url(Imagenes/fondocuadrotexto.jpg)  repeat-x left top;
+	height: 19px;
+	border: 1px solid #C5C4BA;
+}
+.cuadrotexto50 {
+	width: 50px;
+	border: 1px solid #B8B8B8;
+	color: #595959;
+	font: normal 10px Arial, Helvetica, sans-serif;
+}
+.boton{
+	background: url(Imagenes/boton.jpg) no-repeat center center;
+	border-top: 0px none;
+	border-right: 0px none;
+	border-bottom: 0px none;
+	border-left: 0px none;
+	height: 22px;
+	width: 155px;
+	cursor:hand; 
+	cursor:pointer;
+}
+/* ---------- Tablas de informacion --------- */
+.tablacontent{
+	background: #FFFFFF;
+	width: 100%;
+	border-top: 1px solid #D4D4D4;
+	border-left: 1px solid #D4D4D4;
+}
+.tablaheader {
+	font: normal 13px Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #46644E;
+	text-align: center;
+	vertical-align: middle;
+	height: 43px;
+	border-right: 1px solid #CFDED5;
+}
+.tablabody  {
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	height: 28px;
+	border-right: 1px solid #CFDED5;
+	border-bottom: 1px solid #D4D4D4;
+}
+.tablabody a {
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+	text-decoration: underline;
+}
+.tablabody a:hover {
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+	text-decoration: none;
+}
+.tablafooter  {
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #46644E;
+	text-decoration: none;
+	text-align: right;
+	vertical-align: baseline;
+	height: 28px;
+	border-right: 1px solid #CFDED5;
+	border-bottom: 1px solid #D4D4D4;
+	background: #F0F0F0;
+	border-left: 1px solid #D4D4D4;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+.tablafooter a  {
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #46644E;
+	border-right: 1px solid #46644E;
+	padding-right: 5px;
+	text-decoration: none;
+	border-left: 1px solid #46644E;
+	padding-left: 5px;
+}
+.tablafooter a:hover  {
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #46644E;
+	border-right: 1px solid #46644E;
+	padding-right: 5px;
+	text-decoration: underline;
+	border-left: 1px solid #46644E;
+	padding-left: 5px;
+}
+
+.CollapsePanel {
+      background-color:#FFFFFF;
+      overflow:hidden;
+}
+
+table.modal {
+	cursor:move;
+}
+table.modal div.mainframe {
+	/*width:800px;*/
+	border:3px solid #46644E;
+	padding:10px;
+	background:#FFF;	
+}
+table.modalAdver div.mainframe {
+	/*width:800px;*/
+    border:6px solid #FFC429;
+	padding:10px;
+	background:#FFF;	
+}
+table.modalError div.mainframe {
+    border:6px solid #46644E;
+	padding:10px;
+	background:#FFF;	
+}
+table.modalInfo div.mainframe {
+    border:6px solid #768BC2;
+	padding:10px;
+	background:#FFF;	
+}
+table.modal.bottom {
+	background:url(Images/Template/modal_bottom.png) top left repeat-x;
+	height:16px;
+}
+table.modal.right {
+	background:url(Images/Template/modal_right.png) top left repeat-y;
+	width:16px;
+}
+table.modal .modal_footer {
+	font-size:9px;
+	padding-top:10px;
+	border-top:1px dotted #CCC;
+}
+.tableMesssage td {
+	text-align :justify;
+}
+.label_MensagePequeno {
+	text-align :center;
+	font-family: Verdana;
+	font-size : 8.5;
+}
+.sectiontit {
+	background:url(Images/Template/sectiontit_TM.jpg) top left repeat-x;
+	color:#FFF;
+	font-weight:bold;
+	font-size:11px;
+	font-family:Verdana;	
+	font-style:normal;
+}
+.sectionMenAdver a.titulo{	
+	font-weight:bold;
+	font-size:11px;
+	font-family:Verdana;	
+	font-style:normal;
+	text-align:justify;
+	vertical-align:middle;
+}
+
+/*WilMor*/
+.modalBackground
+{
+    background-color: Black;
+    filter: alpha(opacity=70);
+    opacity: 0.7;    
+}
+.modalPopup
+{
+    border: 3px solid black;
+	background-color: #FFFFFF;
+    padding-top: 10px;
+    width: 780px;
+    }
+
+.modalAlert
+{
+    background-color: #FFFFFF;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    padding-top: 10px;
+    width: 300px;
+    height: 150px;
+}

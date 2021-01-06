@@ -7,11 +7,11 @@ import { HttpService } from 'src/app/core/services/http.service';
 import { Reserva } from '../model/reserva';
 import { HttpResponse } from '@angular/common/http';
 
-describe('ProductoService', () => {
+describe('ReservaService', () => {
   let httpMock: HttpTestingController;
   let service: ReservaService;
-  const apiEndpointProductoConsulta = `${environment.endpoint}/tiposFamilia`;
-  const apiEndpointProductos = `${environment.endpoint}/productos`;
+  const apiEndpointReservaConsulta = `${environment.endpoint}/reservas`;
+  const apiEndpointReservas = `${environment.endpoint}/reservas`;
 
   beforeEach(() => {
     const injector = TestBed.configureTestingModule({
@@ -23,39 +23,39 @@ describe('ProductoService', () => {
   });
 
   it('should be created', () => {
-    const productService: ReservaService = TestBed.inject(ReservaService);
-    expect(productService).toBeTruthy();
+    const reservaService: ReservaService = TestBed.inject(ReservaService);
+    expect(reservaService).toBeTruthy();
   });
 
-  it('deberia listar productos', () => {
-    const dummyProductos = [
+  it('deberia listar reservas', () => {
+    const dummyReservas = [
       new Reserva(1, new Date(), 1), new Reserva(2, new Date(), 2)
     ];
-    service.consultar().subscribe(productos => {
-      expect(productos.length).toBe(2);
-      expect(productos).toEqual(dummyProductos);
+    service.consultar().subscribe(reservas => {
+      expect(reservas.length).toBe(2);
+      expect(reservas).toEqual(dummyReservas);
     });
-    const req = httpMock.expectOne(apiEndpointProductoConsulta);
+    const req = httpMock.expectOne(apiEndpointReservaConsulta);
     expect(req.request.method).toBe('GET');
-    req.flush(dummyProductos);
+    req.flush(dummyReservas);
   });
 
   it('deberia crear una reserva', () => {
-    const dummyProducto = new Reserva(2, new Date(), 1);
-    service.guardar(dummyProducto).subscribe((respuesta) => {
+    const dummyReserva = new Reserva(2, new Date(), 1);
+    service.guardar(dummyReserva).subscribe((respuesta) => {
       expect(respuesta).toEqual(true);
     });
-    const req = httpMock.expectOne(apiEndpointProductos);
+    const req = httpMock.expectOne(apiEndpointReservas);
     expect(req.request.method).toBe('POST');
     req.event(new HttpResponse<boolean>({body: true}));
   });
 
-  it('deberia eliminar un producto', () => {
-    const dummyProducto = new Reserva(2, new Date(), 1);
-    service.eliminar(dummyProducto).subscribe((respuesta) => {
+  it('deberia eliminar una reserva', () => {
+    const dummyReserva = new Reserva(2, new Date(), 1);
+    service.eliminar(dummyReserva.id).subscribe((respuesta) => {
       expect(respuesta).toEqual(true);
     });
-    const req = httpMock.expectOne(`${apiEndpointProductos}/1`);
+    const req = httpMock.expectOne(`${apiEndpointReservas}/1`);
     expect(req.request.method).toBe('DELETE');
     req.event(new HttpResponse<boolean>({body: true}));
   });

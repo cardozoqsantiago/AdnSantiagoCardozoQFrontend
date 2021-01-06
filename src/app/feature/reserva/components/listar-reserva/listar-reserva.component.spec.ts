@@ -9,11 +9,11 @@ import { ReservaService } from '../../shared/service/reserva.service';
 import { Reserva } from '../../shared/model/reserva';
 import { HttpService } from 'src/app/core/services/http.service';
 
-describe('ListarProductoComponent', () => {
+describe('ListarReservaComponent', () => {
   let component: ListarReservaComponent;
   let fixture: ComponentFixture<ListarReservaComponent>;
-  let productoService: ReservaService;
-  const listaProductos: Reserva[] = [new Reserva('1', 'Producto 1'), new Reserva('2', 'Producto 2')];
+  let reservaService: ReservaService;
+  const listaReservas: Reserva[] = [new Reserva(1, new Date(), 1), new Reserva(2, new Date(), 2)];
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -31,9 +31,9 @@ describe('ListarProductoComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ListarReservaComponent);
     component = fixture.componentInstance;
-    productoService = TestBed.inject(ReservaService);
-    spyOn(productoService, 'consultar').and.returnValue(
-      of(listaProductos)
+    reservaService = TestBed.inject(ReservaService);
+    spyOn(reservaService, 'consultar').and.returnValue(
+      of(listaReservas)
     );
     fixture.detectChanges();
   });
